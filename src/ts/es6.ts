@@ -74,5 +74,6 @@ const calc = async () => {
   console.log('calc result:', total)
 }
 calc()
+console.log('紧跟async func之后')
 
 export { }

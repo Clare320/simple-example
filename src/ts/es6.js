@@ -1,3 +1,4 @@
+'use strict'
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
   function adopt (value) { return value instanceof P ? value : new P(function (resolve) { resolve(value) }) }
   return new (P || (P = Promise))(function (resolve, reject) {
@@ -36,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true }
   }
 }
-var _this = this
+exports.__esModule = true
 // let声明变量 const声明常量
 var a = 12
 var b = 13
@@ -60,9 +61,16 @@ var Direction;
   Direction[Direction.Right = 3] = 'Right'
 })(Direction || (Direction = {}))
 var direction = Direction.Up
+// Any, null, undefined, never
+// 泛型
+var test11 = function (s) {
+  return s
+}
 // 解构赋值
+// 对象对应key
 var _a = { studentName: 'xiaoming', age: 18, sex: 'male' }; var studentName = _a.studentName; var age = _a.age; var sex = _a.sex; var _b = _a.address; var address = _b === void 0 ? '1006号' : _b
 console.log('name:' + studentName + ',age:' + age + ',sex:' + sex + ',address:' + address)
+// 数组对应下标
 var _c = [93, 97, 91]; var cn = _c[0]; var math = _c[1]; var es = _c[2]
 console.log('cn:' + cn + ',math:' + math + ',es:' + es)
 // 箭头函数
@@ -70,6 +78,11 @@ var add = function (a, b) {
   return a + b
 }
 console.log('total is', add(a, b))
+var params = { theme: 'dark', icons: 100 }
+var show = function (_a) {
+  var theme = _a.theme; var icons = _a.icons
+  console.log('current theme is ' + theme + ', icons is ' + icons)
+}
 // Promise
 var promise = new Promise(function (resolve, reject) {
   try {
@@ -88,7 +101,7 @@ var mult = function (a, b) {
 }
 // async-await
 var calc = function () {
-  return __awaiter(_this, void 0, void 0, function () {
+  return __awaiter(void 0, void 0, void 0, function () {
     var total
     return __generator(this, function (_a) {
       switch (_a.label) {
@@ -102,3 +115,4 @@ var calc = function () {
   })
 }
 calc()
+console.log('紧跟async func之后')

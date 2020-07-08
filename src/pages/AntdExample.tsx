@@ -2,8 +2,9 @@ import React, { FC, lazy, useState, useEffect } from 'react'
 import { Button, Descriptions, Table } from 'antd'
 import { useToggle } from 'ahooks'
 import Loadable from 'react-loadable'
+
 import styles from './AntdExample.less'
-import Love from './Run'
+import Run from './Run'
 
 interface Record {
   id: number
@@ -69,8 +70,8 @@ const AntdExample: FC = () => {
 
   return (
     <div>
-      <Button type="primary" onClick={() => toggle()}>测试aHooks-{state}</Button>
-      <Love orientation={state} />
+      <Button type="primary" onClick={() => toggle()}>aHooks-{state}</Button>
+      <Run orientation={state} />
       {
         greeter !== null &&
         (() => {

@@ -4,7 +4,7 @@ import Hello from './Hello'
 import MovedCube from './MovedCube'
 import AntdExample from './AntdExample'
 
-function App() {
+function App () {
   return (
     <div className='App'>
       <Hello name='xiaoming' />

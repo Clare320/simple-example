@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 
-interface HelloProps { 
+interface Props {
   name: string
 }
 
-const Hello: FC<HelloProps> = ({ name }) => { 
+const Hello: FC<Props> = ({ name }) => {
   return (
     <div>Hello {name}</div>
   )
